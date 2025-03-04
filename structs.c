@@ -28,6 +28,22 @@ typedef struct sListaTarefas{
 }TListaTarefas;
 
 
+void conferir_itemLista(int item){
+    if(item==0){
+        printf("Feito\n");
+    }
+    else{
+        printf("Pendente\n");
+    }
+}
+
+void listaCompleta(TListaTarefas lista){
+    printf("Lista de Compras: \n\t Cachos de banana necessários: %d | ", lista.compras.cachosBanana);
+        conferir_itemLista(lista.compras.cachosBanana);
+    
+    printf("\n");
+}
+
 int main() {
     TListaTarefas lista={
         .compras={2, 5, 1, 1},
@@ -77,7 +93,7 @@ int main() {
                 break;
             
             case 1:
-                // função listaCompleta();
+                listaCompleta(lista);
                 break;
             
             case 2:
