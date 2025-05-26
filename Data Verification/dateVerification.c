@@ -59,8 +59,7 @@ int main() {
     return 0;
 }
 /*
-    This was my previous code on February, before I asked for help. It was messy, very hard to read and the main reason I've put "haha if statements go brr" at the start of the function
-        My mind expanded after this lmao
+    This was my previous code on the February part, before I asked for help.
     
     if(month==2){
         if(year%100==0){
