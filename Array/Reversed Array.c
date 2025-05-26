@@ -2,23 +2,24 @@
 
 int main() {
     int array[10] = {18, 9, 3, 2, 5, 3, 2, 9, 8, 2};
-    int reversed_array[10];
+    int array_size = sizeof(array) / sizeof(array[0]);
     
-    int i=0, j=9;
-    do{
-        reversed_array[i] = array[j];
-        i++;
-        j--;
-    }while(i<10 && j>=0);
+    printf("%d\n", array_size);
     
     printf("Original array:");
-    for(i=0; i<10; i++){
+    for(int i=0; i<10; i++){
         printf(" %d", array[i]);
     }
-
+    
+    for(int i=0, j=array_size-1; i<j; i++, j--){
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    
     printf("\nReversed array:");
-    for(i=0; i<10; i++){
-        printf(" %d", reversed_array[i]);
+    for(int i=0; i<10; i++){
+        printf(" %d", array[i]);
     }
 
     return 0;
